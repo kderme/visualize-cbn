@@ -1,0 +1,25 @@
+digraph G {
+node [ fontname=monospace, shape=plaintext ];
+s0[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>r</I>&nbsp;<I>n</I>&nbsp;-&gt;&nbsp;<B>if</B>&nbsp;<I>n</I>&nbsp;==&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>then</B>&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>else</B>&nbsp;<B>let</B>&nbsp;<I>n'</I>&nbsp;=&nbsp;<I>n</I>&nbsp;-&nbsp;1&nbsp;<B>in</B><BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>seq</B>&nbsp;<I>n'</I>&nbsp;(<I>n</I>&nbsp;*&nbsp;<I>r</I>&nbsp;<I>n'</I>)<BR /></TD></TR></TABLE>>];
+s0;
+s1[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>f</I>&nbsp;-&gt;&nbsp;<I>f</I>&nbsp;(<FONT COLOR="blue">fix</FONT>&nbsp;<I>f</I>)<BR /></TD></TR></TABLE>>];
+s1 -> s1;
+s2[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;mul<BR /></TD></TR></TABLE>>];
+s2 -> s3, s4;
+s3[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;5<BR /></TD></TR></TABLE>>];
+s3;
+s4[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;mul<BR /></TD></TR></TABLE>>];
+s4 -> s5, s6;
+s5[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;4<BR /></TD></TR></TABLE>>];
+s5;
+s6[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;mul<BR /></TD></TR></TABLE>>];
+s6 -> s7, s8;
+s7[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;3<BR /></TD></TR></TABLE>>];
+s7;
+s8[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;mul<BR /></TD></TR></TABLE>>];
+s8 -> s9, s10;
+s9[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;2<BR /></TD></TR></TABLE>>];
+s9;
+s10[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;1<BR /></TD></TR></TABLE>>];
+s10;
+}

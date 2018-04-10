@@ -1,0 +1,7 @@
+digraph G {
+node [ fontname=monospace, shape=plaintext ];
+s0[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>n</I>&nbsp;-&gt;&nbsp;<B>if</B>&nbsp;<I>n</I>&nbsp;&lt;=&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>then</B>&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>else</B>&nbsp;<FONT COLOR="blue">fac</FONT>&nbsp;(<I>n</I>&nbsp;-&nbsp;1)&nbsp;*&nbsp;<I>n</I><BR /></TD></TR></TABLE>>];
+s0 -> s0;
+s1[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Thunk&nbsp;:&nbsp;<B>if</B>&nbsp;1&nbsp;&lt;=&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>then</B>&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>else</B>&nbsp;<FONT COLOR="blue">fac</FONT>&nbsp;(1&nbsp;-&nbsp;1)&nbsp;*&nbsp;1<BR /></TD></TR></TABLE>>];
+s1 -> s0;
+}

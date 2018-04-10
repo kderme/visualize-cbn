@@ -1,0 +1,29 @@
+digraph G {
+node [ fontname=monospace, shape=plaintext ];
+s0[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>n</I>&nbsp;<I>m</I>&nbsp;-&gt;&nbsp;<B>if</B>&nbsp;<I>n</I>&nbsp;&lt;=&nbsp;<I>m</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>then</B>&nbsp;<I>n</I>&nbsp;:&nbsp;<FONT COLOR="blue">enumFromTo</FONT>&nbsp;(<I>n</I>&nbsp;+&nbsp;1)&nbsp;<I>m</I><BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>else</B>&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR /></TD></TR></TABLE>>];
+s0 -> s0;
+s1[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>acc</I>&nbsp;<I>xs</I>&nbsp;-&gt;&nbsp;<B>case</B>&nbsp;<I>xs</I>&nbsp;<B>of</B>&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;<I>acc</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>x</I>:<I>xs'</I>&nbsp;-&gt;&nbsp;<FONT COLOR="blue">length</FONT>&nbsp;(1&nbsp;+&nbsp;<I>acc</I>)&nbsp;<I>xs'</I><BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR /></TD></TR></TABLE>>];
+s1 -> s1;
+s2[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Thunk&nbsp;:&nbsp;<B>case</B>&nbsp;(\<I>m</I>&nbsp;-&gt;&nbsp;<B>if</B>&nbsp;n_3&nbsp;&lt;=&nbsp;<I>m</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>then</B>&nbsp;n_3&nbsp;:&nbsp;<FONT COLOR="blue">enumFromTo</FONT>&nbsp;(n_3&nbsp;+&nbsp;1)&nbsp;<I>m</I><BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>else</B>&nbsp;[])&nbsp;3&nbsp;<B>of</B>&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;acc_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>x</I>:<I>xs'</I>&nbsp;-&gt;&nbsp;<FONT COLOR="blue">length</FONT>&nbsp;(1&nbsp;+&nbsp;acc_2)&nbsp;<I>xs'</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR /></TD></TR></TABLE>>];
+s2 -> s0, s1, s7, s10;
+s3[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;add<BR /></TD></TR></TABLE>>];
+s3 -> s4, s5;
+s4[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;1<BR /></TD></TR></TABLE>>];
+s4;
+s5[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;0<BR /></TD></TR></TABLE>>];
+s5;
+s6[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;2<BR /></TD></TR></TABLE>>];
+s6;
+s7[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;add<BR /></TD></TR></TABLE>>];
+s7 -> s8, s9;
+s8[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;1<BR /></TD></TR></TABLE>>];
+s8;
+s9[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Indirection&nbsp;<BR /></TD></TR></TABLE>>];
+s9 -> s3;
+s10[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;add<BR /></TD></TR></TABLE>>];
+s10 -> s11, s12;
+s11[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Indirection&nbsp;<BR /></TD></TR></TABLE>>];
+s11 -> s6;
+s12[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;1<BR /></TD></TR></TABLE>>];
+s12;
+}

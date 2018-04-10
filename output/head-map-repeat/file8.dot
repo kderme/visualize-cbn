@@ -1,0 +1,19 @@
+digraph G {
+node [ fontname=monospace, shape=plaintext ];
+s0[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>xs</I>&nbsp;-&gt;&nbsp;<B>case</B>&nbsp;<I>xs</I>&nbsp;<B>of</B>&nbsp;{<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>x</I>:<I>xs'</I>&nbsp;-&gt;&nbsp;<I>x</I><BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR /></TD></TR></TABLE>>];
+s0;
+s1[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Thunk&nbsp;:&nbsp;f_0&nbsp;x_1<BR /></TD></TR></TABLE>>];
+s1 -> s4, s5;
+s2[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>f</I>&nbsp;<I>xs</I>&nbsp;-&gt;&nbsp;<B>case</B>&nbsp;<I>xs</I>&nbsp;<B>of</B>&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&nbsp;[]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>x</I>:<I>xs'</I>&nbsp;-&gt;&nbsp;<B>let</B>&nbsp;<I>fx</I>&nbsp;=&nbsp;<I>f</I>&nbsp;<I>x</I>&nbsp;<B>in</B><BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>fx</I>&nbsp;:&nbsp;<FONT COLOR="blue">map</FONT>&nbsp;<I>f</I>&nbsp;<I>xs'</I>&nbsp;<BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR /></TD></TR></TABLE>>];
+s2 -> s2;
+s3[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>x</I>&nbsp;-&gt;&nbsp;<B>let</B>&nbsp;<I>xs</I>&nbsp;=&nbsp;<FONT COLOR="blue">repeat</FONT>&nbsp;<I>x</I>&nbsp;<B>in</B><BR />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<I>x</I>&nbsp;:&nbsp;<I>xs</I>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR /></TD></TR></TABLE>>];
+s3 -> s3;
+s4[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Funtion&nbsp;:&nbsp;\<I>x</I>&nbsp;-&gt;&nbsp;<I>x</I>&nbsp;+&nbsp;<I>x</I><BR /></TD></TR></TABLE>>];
+s4;
+s5[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;add<BR /></TD></TR></TABLE>>];
+s5 -> s6, s7;
+s6[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;10<BR /></TD></TR></TABLE>>];
+s6;
+s7[label=<<TABLE ALIGN="LEFT"><TR><TD BALIGN="LEFT" ALIGN="LEFT">Primary&nbsp;:&nbsp;1<BR /></TD></TR></TABLE>>];
+s7;
+}
